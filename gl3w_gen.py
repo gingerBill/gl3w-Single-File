@@ -157,7 +157,7 @@ GL3WglProc gl3w_get_proc_address(char const *proc);
 #define WIN32_MEAN_AND_LEAN 1
 #include <windows.h>
 
-static void *gl3w__libgl;
+static HMODULE gl3w__libgl;
 
 static void gl3w__open_libgl (void) { gl3w__libgl = LoadLibraryA("opengl32.dll"); }
 static void gl3w__close_libgl(void) { FreeLibrary(gl3w__libgl); }
